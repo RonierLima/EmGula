@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link type="text/css" rel="stylesheet" href="src/css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Em Gula</title>
+  </head>
+  <body id="contato">
+    <header class="header-bg">
+      <div class="header">
+        <div class="logo-bg">
+          <a href=""><img src="src/img/logo.png" alt="logo"/></a>
+        </div>
+
+        <nav class="menu-bar">
+          <a href="index.html" class="menu-item">HOME</a>
+          <a href="sobre.html" class="menu-item">SOBRE</a>
+          <a href="menu.html" class="menu-item">MENU</a>
+          <a href="contato.html" class="menu-item">CONTATO</a>
+        </nav>
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <form action="" class="formulario" method="POST">
+        <div class="form-nome">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            required
+            pattern="^[a-zA-Z_\- ]+$"
+            title="Use apenas letras A-Z"
+            placeholder="Insira seu Nome"
+            name="nome"
+          />
+        </div>
+        <div class="form-email">
+          <i class="fas fa-envelope"></i>
+          <input type="email" required placeholder="example@mail.com" />
+        </div>
+
+        <div class="form-tel">
+          <i class="fas fa-phone"></i>
+          <input
+            class="tel"
+            type="text"
+            required
+            placeholder="(00) 9 9999-9999"
+          />
+        </div>
+        <div class="form-text">
+          <i class="fas far fa-edit"></i>
+          <textarea
+            name="mensagem"
+            id="mensagem"
+            grabber="disable"
+            placeholder="Escreva aqui sua mensagem"
+          ></textarea>
+        </div>
+        <p>Date: <input type="text" id="datepicker"></p>
+
+        <div><input type="submit" value="Enviar" /></div>
+        
+      </form>
+    </div>
+    <footer class="footer">footer</footer>
+
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/jquery.mask.min.js"></script>
+    <script src="src/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".menu").click(function() {
+          $(".menu").toggleClass("active");
+          $(".menu-bar").toggleClass("active");
+        });
+        $(".open").click(function() {
+          $(".sobre").toggleClass("active");
+          $(".open").toggleClass("desable");
+        });
+
+        $(".close").click(function() {
+          $(".sobre").removeClass("active");
+          $(".open").removeClass("desable");
+        });
+        $(".tel").mask("(99) 9 9999-9999");
+      }); 
+    </script>
+  </body>
+</html>

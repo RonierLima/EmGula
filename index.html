@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link type="text/css" rel="stylesheet" href="src/css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <title>Em Gula</title>
+  </head>
+  <body>
+    <header class="header-bg">
+      <div class="header">
+        <div class="logo-bg">
+          <a href=""><img src="src/img/logo.png" alt="logo"/></a>
+        </div>
+
+        <nav class="menu-bar">
+          <a href="index.html" class="menu-item">HOME</a>
+          <a href="sobre.html" class="menu-item">SOBRE</a>
+          <a href="menu.html" class="menu-item">MENU</a>
+          <a href="contato.html" class="menu-item">CONTATO</a>
+        </nav>
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="section s1">
+        <div class="box">
+          <div class="open"><h1>Sobre</h1></div>
+          <div class="sobre">
+            <div class="close-bg">
+              <i class=" close far fa-window-close fa-2x"></i>
+            </div>
+            <div class="logo-bg">
+              <img class="logo" src="src/img/logo-inverso.png" alt="" />
+            </div>
+            <p>
+              Desde o começo do Em Gula, em 1988, já sabíamos que fazer o que a
+              gente ama era fundamental. Nada substitui o sentimento. A gente
+              acredita tanto nisso que depositamos o nosso melhor em cada
+              detalhe para fazer da sua refeição um momento delicioso. E para
+              tornar esse ideal uma realidade, buscamos no fundo do coração o
+              ingrediente secreto. Sentimento não se imita, só quem sente sabe o
+              quanto ele é verdadeiro, e no Em Gula você descobre isso logo na
+              primeira mordida, através de um sabor original feito de coração
+              para coração.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section delivery">
+        <div class="delivery-img anime">
+          <a href="tel:+551540028922" target="_blank"
+            ><img src="src/img/delivery.png" alt=""
+          /></a>
+        </div>
+        <i class="fas fa-phone ligar"></i>
+      </section>
+
+      <section class="section s-img"></section>
+
+      <section class="section s3">
+        <div class="s3-item">
+          <img src="src/img/estacionamento.png" alt="" />
+          <h2>Estacionamento</h2>
+        </div>
+        <div class="s3-item">
+          <img src="src/img/wifi.png" alt="" />
+          <h2>Wifi grátis</h2>
+        </div>
+        <div class="s3-item">
+          <img src="src/img/parque.png" alt="" />
+          <h2>Espaço Kids</h2>
+        </div>
+        <div class="s3-item">
+          <img src="src/img/tv.png" alt="" />
+          <h2>Entretenimento</h2>
+        </div>
+      </section>
+
+      <section class="section s-img penne"></section>
+
+      <section class="pratos">
+        <div class="prato-item">
+          <div class="prato-img"><img src="src/img/penne.png" alt="" /></div>
+          <div class="descricao">
+            <h2><i class="fas fa-utensils"></i></h2>
+            <a href=""><p>Ver no cardapio</p></a>
+          </div>
+        </div>
+        <div class="prato-item">
+          <div class="prato-img"><img src="src/img/sbms.jpg" alt="" /></div>
+          <div class="descricao">
+            <h2><i class="fas fa-ice-cream"></i></h2>
+            <a href=""> <p>Ver no cardapio</p></a>
+          </div>
+        </div>
+        <div class="prato-item">
+          <div class="prato-img"><img src="src/img/hmb.png" alt="" /></div>
+          <div class="descricao">
+            <h2><i class="fas fa-hamburger"></i></h2>
+            <a href=""> <p>Ver no cardapio</p></a>
+          </div>
+        </div>
+        <div class="prato-item">
+          <div class="prato-img"><img src="src/img/pizza.jpg" alt="" /></div>
+          <div class="descricao">
+            <h2><i class="fas fa-pizza-slice"></i></h2>
+            <a href=""><p>Ver no cardapio</p></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div>
+        Rua do Bobo, nº O
+      </div>
+      <div>4002-8922</div>
+
+      <div>Desde 1988</div>
+      <div>Desenvolvido por : Ronier Lima</div> 
+    </footer>
+
+    <script src="src/js/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".menu").click(function() {
+          $(".menu").toggleClass("active");
+          $(".menu-bar").toggleClass("active");
+        });
+        $(".open").click(function() {
+          $(".sobre").toggleClass("active");
+          $(".open").toggleClass("desable");
+        });
+
+        $(".close").click(function() {
+          $(".sobre").removeClass("active");
+          $(".open").removeClass("desable");
+        });
+      });
+
+      $(".ligar").click(function() {
+        $(".anime").toggleClass("active");
+        $(".ligar").toggleClass("ativado");
+      });
+    </script>
+  </body>
+</html>

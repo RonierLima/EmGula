@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link type="text/css" rel="stylesheet" href="src/css/estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Em Gula</title>
+  </head>
+
+  <body>
+    <header class="header-bg">
+      <div class="header">
+        <div class="logo-bg">
+          <a href=""><img src="src/img/logo.png" alt="logo"/></a>
+        </div>
+
+        <nav class="menu-bar">
+          <a href="index.html" class="menu-item">HOME</a>
+          <a href="sobre.html" class="menu-item">SOBRE</a>
+          <a href="menu.html" class="menu-item">MENU</a>
+          <a href="contato.html" class="menu-item">CONTATO</a>
+        </nav>
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <section class="section pratos-menu">
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_forest.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_lights.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_mountains.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="pratos-mais" class="section pratos-menu disable">
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_forest.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_lights.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="img_mountains.jpg">
+              <img src="src/img/hmb.png" alt="" width="600" height="400" />
+            </a>
+            <div class="desc">R$ 5,00</div>
+          </div>
+        </div>
+      </section>
+      <button id="ver_mais">Ver Mais</button>
+      <button id="ver_menos">Ver Menos</button>
+
+    </div>
+    <footer class="footer">footer</footer>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".menu").click(function() {
+          $(".menu").toggleClass("active");
+          $(".menu-bar").toggleClass("active");
+        });
+      
+      });
+
+      $(document).ready(function() {
+        $("#ver_mais").click(function() {
+          $("#pratos-mais").toggleClass("active");
+          $("#ver_mais").toggleClass("disable");
+          $("#ver_menos").toggleClass("active");
+        });
+        $("#ver_menos").click(function() {
+          $("#pratos-mais").removeClass("active");
+          $("#ver_mais").removeClass("disable");
+          $("#ver_menos").removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

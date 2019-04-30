@@ -11,7 +11,33 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/css/jquery-ui.min.css">
+    
+  
     <title>Em Gula</title>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/jquery-ui.js"></script>
+    <script src="src/js/jquery.mask.min.js"></script>
+   
+    <script>
+        $(document).ready(function() {
+          $(".menu").click(function() {
+            $(".menu").toggleClass("active");
+            $(".menu-bar").toggleClass("active");
+          });
+          $(".open").click(function() {
+            $(".sobre").toggleClass("active");
+            $(".open").toggleClass("desable");
+          });
+
+          $(".close").click(function() {
+            $(".sobre").removeClass("active");
+            $(".open").removeClass("desable");
+          });
+          $(".tel").mask("(99) 9 9999-9999");
+          $( "#datepicker" ).datepicker();
+        }); 
+    </script>
   </head>
   <body id="contato">
     <header class="header-bg">
@@ -61,6 +87,7 @@
             placeholder="(00) 9 9999-9999"
           />
         </div>
+       
         <div class="form-text">
           <i class="fas far fa-edit"></i>
           <textarea
@@ -70,34 +97,23 @@
             placeholder="Escreva aqui sua mensagem"
           ></textarea>
         </div>
-        <p>Date: <input type="text" id="datepicker"></p>
 
         <div><input type="submit" value="Enviar" /></div>
+
+
+      <p>Date: <input type="text" id="datepicker"></p>
         
       </form>
     </div>
-    <footer class="footer">footer</footer>
+    <footer class="footer"><div>
+      Rua do Bobo, nº O
+    </div>
+    <div>4002-8922</div>
 
-    <script src="src/js/jquery.js"></script>
-    <script src="src/js/jquery.mask.min.js"></script>
-    <script src="src/js/jquery-ui.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".menu").click(function() {
-          $(".menu").toggleClass("active");
-          $(".menu-bar").toggleClass("active");
-        });
-        $(".open").click(function() {
-          $(".sobre").toggleClass("active");
-          $(".open").toggleClass("desable");
-        });
+    <div>Desde 1988</div>
+    <div>Desenvolvido por : Ronier Lima</div> </footer>
 
-        $(".close").click(function() {
-          $(".sobre").removeClass("active");
-          $(".open").removeClass("desable");
-        });
-        $(".tel").mask("(99) 9 9999-9999");
-      }); 
-    </script>
+    
+    
   </body>
 </html>

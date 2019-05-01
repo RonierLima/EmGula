@@ -1,2 +1,2 @@
 # EmGula
-## Site de um retaurante para antender um trabalho da disciplina de Desenvolvimento Web
+## Site de um restaurante para antender um trabalho da disciplina de Desenvolvimento Web

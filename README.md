@@ -5,4 +5,4 @@ Site de um restaurante para atender a um trabalho da disciplina de Desenvolvimen
 
 ## Acesse: 
 
-[Clique aqui](https://github.com/RonierLima/EmGula.git)
+[https://ronierlima.github.io/EmGula](https://ronierlima.github.io/EmGula)
